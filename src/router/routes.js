@@ -6,7 +6,7 @@ module.exports = [{
     navigationBarTitleText: 'mpvue中使用第三方UI组件',
     enablePullDownRefresh: false,
     usingComponents: {
-      'i-button': '../../iView/button/index'
+      'i-button': '../../static/iview/button/index'
     }
   }
 }];
