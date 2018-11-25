@@ -1,0 +1,74 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\Administrator\bin;D:\Git\mingw64\bin;D:\Git\usr\local\bin;D:\Git\usr\bin;D:\Git\usr\bin;D:\Git\mingw64\bin;D:\Git\usr\bin;C:\Users\Administrator\bin;D:\Python36;D:\Python36\Scripts;D:\Ruby23-x64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_112\bin;C:\Program Files\Java\jdk1.8.0_112\jre\bin;D:\apache-ant-1.9.7\bin;D:\adt\sdk\tools;D:\adt\sdk\platform-tools;D:\adt\sdk\build-tools;D:\adt\eclipse\plugins\org.apache.ant_1.8.3.v201301120609;D:\gradle-3.5.1\bin;D:\apache-maven-3.3.9\bin;D:\apache-ant-1.9.7\bin;D:\Git\cmd;C:\Windows\System32;D:\Tomcat\lib;D:\Tomcat\bin;D:\mysql\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\TortoiseSVN\bin;D:\mysql\bin;D:\Python36\Scripts;D:\Python36;C:\Program Files\Java\jdk1.8.0_112\bin;C:\Program Files\Java\jdk1.8.0_112\jre\bin;C:\Users\Administrator\AppData\Roaming\npm;E:\Microsoft VS Code\Microsoft VS Code\bin;D:\Git\usr\bin\vendor_perl;D:\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  8.1.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.npm.taobao.org:443
+      at Object.exports._errnoException (util.js:1022:11)
+      at errnoException (dns.js:55:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:91:26)
+
+npm manifest: 
+  {
+    "name": "myApp",
+    "version": "1.0.0",
+    "private": true,
+    "description": "taro",
+    "main": "index.js",
+    "scripts": {
+      "build:weapp": "taro build --type weapp",
+      "build:h5": "taro build --type h5",
+      "build:rn": "taro build --type rn",
+      "dev:weapp": "npm run build:weapp -- --watch",
+      "dev:h5": "npm run build:h5 -- --watch",
+      "dev:rn": "npm run build:rn -- --watch",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "@tarojs/components": "^1.0.7",
+      "@tarojs/router": "^1.0.7",
+      "@tarojs/taro": "^1.0.7",
+      "@tarojs/taro-h5": "^1.0.7",
+      "@tarojs/taro-weapp": "^1.0.7",
+      "nervjs": "^1.3.0"
+    },
+    "devDependencies": {
+      "@types/react": "16.3.14",
+      "@types/webpack-env": "^1.13.6",
+      "@tarojs/plugin-babel": "^1.0.7",
+      "@tarojs/plugin-csso": "^1.0.7",
+      "@tarojs/plugin-sass": "^1.0.7",
+      "@tarojs/plugin-uglifyjs": "^1.0.7",
+      "@tarojs/webpack-runner": "^1.0.7",
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "babel-plugin-transform-decorators-legacy": "^1.3.4",
+      "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-preset-env": "^1.6.1",
+      "babel-eslint": "^8.2.3",
+      "eslint": "^4.19.1",
+      "eslint-config-taro": "^1.0.7",
+      "eslint-plugin-react": "^7.8.2",
+      "eslint-plugin-import": "^2.12.0",
+      "eslint-plugin-taro": "^1.0.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

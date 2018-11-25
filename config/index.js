@@ -1,25 +1,92 @@
-var path = require('path')
-
-module.exports = {
-  build: {
-    env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    productionSourceMap: false,
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css'],
-    bundleAnalyzerReport: process.env.npm_config_report
+const config = {
+  projectName: 'myApp',
+  date: '2018-11-25',
+  designWidth: 750,
+  deviceRatio: {
+    '640': 2.34 / 2,
+    '750': 1,
+    '828': 1.81 / 2
   },
-  dev: {
-    env: require('./dev.env'),
-    port: 8080,
-    // 在小程序开发者工具中不需要自动打开浏览器
-    autoOpenBrowser: false,
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    proxyTable: {},
-    cssSourceMap: false
+  sourceRoot: 'src',
+  outputRoot: 'dist',
+  plugins: {
+    babel: {
+      sourceMap: true,
+      presets: [
+        'env'
+      ],
+      plugins: [
+        'transform-class-properties',
+        'transform-decorators-legacy',
+        'transform-object-rest-spread'
+      ]
+    },
+    typescript: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: true,
+        baseUrl: '.',
+        declaration: false,
+        experimentalDecorators: true,
+        jsx: 'preserve',
+        jsxFactory: 'Nerv.createElement',
+        module: 'commonjs',
+        moduleResolution: 'node',
+        noImplicitAny: false,
+        noUnusedLocals: true,
+        outDir: './dist/',
+        preserveConstEnums: true,
+        removeComments: false,
+        rootDir: '.',
+        sourceMap: true,
+        strictNullChecks: true,
+        target: 'es6'
+      },
+      include: [
+        'src/**/*'
+      ],
+      exclude: [
+        'node_modules'
+      ],
+      compileOnSave: false
+    }
+  },
+  defineConstants: {
+  },
+  copy: {
+     patterns: [
+    ],
+    options: {
+    }
+  },
+  weapp: {
+    module: {
+      postcss: {
+        autoprefixer: {
+          enable: true
+        },
+        url: {
+          enable: true,
+          limit: 10240
+        }
+      }
+    }
+  },
+  h5: {
+    publicPath: '/',
+    staticDirectory: 'static',
+    module: {
+      postcss: {
+        autoprefixer: {
+          enable: true
+        }
+      }
+    }
   }
+}
+
+module.exports = function (merge) {
+  if (process.env.NODE_ENV === 'development') {
+    return merge({}, config, require('./dev'))
+  }
+  return merge({}, config, require('./prod'))
 }
