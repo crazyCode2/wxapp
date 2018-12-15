@@ -1,15 +1,13 @@
 {
-	"miniprogramRoot": "./dist",
-	"projectname": "taro",
-	"description": "taro",
-	"appid": "wx8e58335bd953edc5",
-	"setting": {
-		"urlCheck": true,
-		"es6": false,
-		"postcss": false,
-		"minified": false,
-		"newFeature": true
-	},
-	"compileType": "miniprogram",
-	"condition": {}
+  "miniprogramRoot": "./dist",
+  "projectname": "app",
+  "description": "an new project created by taro",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
 }
