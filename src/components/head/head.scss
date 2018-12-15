@@ -20,7 +20,12 @@
       margin-left: 10PX;
       display: flex;
       flex-direction: column;
-      font-size: 18PX;
+      font-size: 12PX;
+      justify-content: space-between;
+      .title{
+        font-size: 18PX;
+      }
+      height: 80PX;
       .tags_text{
         border: 1PX solid greenyellow;
         padding: 2PX 4PX;
