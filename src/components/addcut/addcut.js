@@ -3,8 +3,9 @@
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text, Image } from '@tarojs/components';
-import { getFoodCount, setFoodCount } from '../../utils/common';
+import { getFoodCount, setFoodCount, getEvent } from '../../utils/common';
 import './addcut.scss';
+const myEvent = getEvent();
 
 class AddCut extends Component {
   constructor(props) {
@@ -17,6 +18,13 @@ class AddCut extends Component {
   componentDidMount(){
     this.setState({
       Num: getFoodCount(this.props.food)
+    });
+    // 监听事件
+    myEvent.on("changeCata",() => {
+      // 监听到分类改变 进行菜品数量刷新
+      this.setState({
+        Num: getFoodCount(this.props.food)
+      })
     })
   }
 

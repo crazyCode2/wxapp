@@ -3,7 +3,10 @@
  */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text, Image } from '@tarojs/components';
+import { getEvent } from '../../utils/common';
 import './cata.scss';
+
+let event = getEvent();
 
 class Cata extends Component {
   constructor(props) {
@@ -29,13 +32,17 @@ class Cata extends Component {
         selectCata: item
       },() => {
         this.props.onChangeCata && this.props.onChangeCata(this.state.selectCata);
-      })
+      });
+      // 触发事件
+      event.emit("changeCata");
     }else if(!this.state.selectCata){
       this.setState({
         selectCata: item
       },() => {
         this.props.onChangeCata && this.props.onChangeCata(this.state.selectCata);
-      })
+      });
+      // 触发事件
+      event.emit("changeCata");
     }
   }
 
