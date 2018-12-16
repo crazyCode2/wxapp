@@ -23,14 +23,18 @@ class Cata extends Component {
   }
 
   clickHandle(item){
-    let { selectCata } = this.state;
-    if(selectCata && selectCata.id != item.id){
+    // let { selectCata } = this.state;
+    if(this.state.selectCata && this.state.selectCata.id != item.id){
       this.setState({
         selectCata: item
+      },() => {
+        this.props.onChangeCata && this.props.onChangeCata(this.state.selectCata);
       })
-    }else if(!selectCata){
+    }else if(!this.state.selectCata){
       this.setState({
         selectCata: item
+      },() => {
+        this.props.onChangeCata && this.props.onChangeCata(this.state.selectCata);
       })
     }
   }
