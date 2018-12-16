@@ -70,3 +70,22 @@ export function setFoodCount(food,Num,type,callBack) {
 export function getEvent() {
   return myEvent;
 }
+
+/**
+ * 获取所有的菜品数量 及 价格
+ */
+export function getAllFoodInfo() {
+  let allPrice = 0; // 总价格
+  let allNum = 0; // 总数
+  let store = Taro.getStorageSync(foodKey); // 取菜品数据
+  if(store){
+    // 对store进行遍历
+    Object.keys(store).map((key) => {
+      if(store[key]){
+        allPrice += store[key].price*store[key].Num;
+        allNum += store[key].Num;
+      }
+    })
+  }
+  return {allPrice,allNum}
+}

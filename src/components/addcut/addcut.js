@@ -35,7 +35,9 @@ class AddCut extends Component {
         setFoodCount(this.props.food,this.state.Num,'cut',() => {
           this.setState({
             Num: getFoodCount(this.props.food)
-          })
+          });
+          // 需要放在回调里面,以保障回写成功
+          myEvent.emit("addcut");
         });
       }else{
         console.error("当前加减菜品出现异常");
@@ -49,7 +51,9 @@ class AddCut extends Component {
       setFoodCount(this.props.food,this.state.Num,'add',() => {
         this.setState({
           Num: getFoodCount(this.props.food)
-        })
+        });
+        // 需要放在回调里面,以保障回写成功
+        myEvent.emit("addcut");
       });
     }
   }
