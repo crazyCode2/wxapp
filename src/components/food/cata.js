@@ -64,4 +64,8 @@ class Cata extends Component {
   }
 }
 
+Cata.defaultProps = {
+  onChangeCata: null
+}
+
 export default Cata;

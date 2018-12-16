@@ -71,4 +71,8 @@ class AddCut extends Component {
   }
 }
 
+AddCut.defaultProps = {
+  food: null
+}
+
 export default AddCut;

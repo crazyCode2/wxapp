@@ -71,7 +71,7 @@ class Food extends Component {
           <AtTabsPane>
             <View className="food_body">
               <Cata onChangeCata={this.changeCata.bind(this)} />
-              <FoodList selectCata={selectCata} currentList={currentList} />
+              <FoodList style="width:100%" selectCata={selectCata} currentList={currentList} />
             </View>
           </AtTabsPane>
           <AtTabsPane>评价</AtTabsPane>

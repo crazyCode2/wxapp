@@ -21,7 +21,7 @@ class FoodList extends Component {
         <Text>{selectCata ? selectCata.name : ''}</Text>
         <View className="foodlist_forlist">
         {
-          currentList.map((item,index) => {
+          currentList.length && currentList.map((item,index) => {
             return (<View key={item.id} className="foodlist_item">
               <Image className="foodlist_item_img" src={item.img == 2 ? require('../../assets/img/back.jpg') : require('../../assets/img/store.jpg')} />
               <View className="foodlist_item_info">
@@ -37,6 +37,11 @@ class FoodList extends Component {
       </View>
     )
   }
+}
+
+FoodList.defaultProps = {
+  selectCata: {},
+  currentList: []
 }
 
 export default FoodList;
