@@ -17,6 +17,19 @@
     border-radius: 50PX;
     background-color: #3A3B36;
     color: #89888D;
+    .num{
+      position: absolute;
+      margin-left: 63PX;
+      margin-top: -20PX;
+      width: 20PX;
+      height: 20PX;
+      border-radius: 50%;
+      color: #fff;
+      background-color: red;
+      line-height: 20PX;
+      text-align: center;
+      z-index: 2;
+    }
     .store_img{
       width: 60PX;
       height: 60PX;
