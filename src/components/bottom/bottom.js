@@ -33,18 +33,30 @@ class Bottom extends Component {
   }
 
   render () {
-    let { Num, sendPrice, supportTakeBySelf, sendMustPrice } = this.state;
+    let { allPrice, Num, sendPrice, supportTakeBySelf, sendMustPrice } = this.state;
     return (
       <View className="bottom">
         <View className="bottom_body">
           {Num ? <Text className="num">{this.state.Num}</Text> : null}
-          <Image className="store_img" src={require('../../assets/img/emptystore.png')} />
+          <Image className="store_img" src={Num ? require('../../assets/img/store.png') : require('../../assets/img/emptystore.png')} />
           <View className="info">
-            <Text>{sendPrice ? `另需配送费￥${sendPrice} | `:""}</Text>
-            <Text>{supportTakeBySelf ? "支持自取":"不支持自取"}</Text>
+            {
+              allPrice ?
+              <Text className="price">{`￥${allPrice}`}</Text>
+              :
+              <View>
+                <Text>{sendPrice ? `另需配送费￥${sendPrice} | `:""}</Text>
+                <Text>{supportTakeBySelf ? "支持自取":"不支持自取"}</Text>
+              </View>
+            }
           </View>
           <View className="submit">
-            <Text>{sendMustPrice ? `￥${sendMustPrice}起送`:""}</Text>
+            {
+              allPrice >= sendMustPrice ?
+              <Text className="goPay">去结算</Text>
+              :
+              <Text>{sendMustPrice ? `￥${sendMustPrice}起送`:""}</Text>
+            }
           </View>
         </View>
       </View>

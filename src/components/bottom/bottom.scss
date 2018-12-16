@@ -44,5 +44,22 @@
       height: 60PX;
       line-height: 60PX;
     }
+    .price{
+      color: #fff;
+      font-weight: bold;
+      font-size: 20PX;
+      margin-left: -80PX;
+    }
+    .goPay{
+      background-color: #f4ea2a;
+      color: black;
+      font-size: 16PX;
+      height: 100%;
+      display: block;
+      width: 100PX;
+      text-align: center;
+      margin-right: -10PX;
+      border-radius: 0 50PX 50PX 0;
+    }
   }
 }
