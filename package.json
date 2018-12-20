@@ -2,7 +2,7 @@
   "name": "myApp",
   "version": "1.0.0",
   "private": true,
-  "description": "taro",
+  "description": "a new project for all platform",
   "main": "index.js",
   "scripts": {
     "dev:weapp": "npm run build:weapp -- --watch",
@@ -17,7 +17,7 @@
     "build:rn": "taro build --type rn",
     "tep": "node template"
   },
-  "author": "cai.bowen <easytuan@foxmail.com>",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "@tarojs/async-await": "1.1.8",
@@ -34,7 +34,6 @@
     "dva-core": "^1.4.0",
     "dva-loading": "^2.0.5",
     "nervjs": "^1.3.0",
-    "node-sass": "^4.10.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
@@ -47,7 +46,6 @@
     "@tarojs/plugin-sass": "1.1.8",
     "@tarojs/plugin-uglifyjs": "1.1.8",
     "@tarojs/webpack-runner": "1.1.8",
-    "@babel/runtime": "7.0.0-beta.46",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
