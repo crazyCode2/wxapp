@@ -1,16 +1,13 @@
 {
-	"miniprogramRoot": "dist/",
-	"projectname": "taro-music",
-	"description": "",
-	"appid": "wxd97fb80b623999d1",
-	"setting": {
-		"urlCheck": false,
-		"es6": false,
-		"postcss": false,
-		"minified": false,
-		"newFeature": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.1",
-	"condition": {}
+  "miniprogramRoot": "./dist",
+  "projectname": "myApp",
+  "description": "a new project for all platform",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
 }
